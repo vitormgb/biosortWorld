@@ -1,0 +1,112 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="ocean_box">
+    <static>true</static>
+    <link name="link">
+      <visual name="ground">
+        <cast_shadows>false</cast_shadows>
+        <pose>0 0 -100 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2000 2000 .1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://Media/materials/scripts/sand.material</uri>
+            <name>BioSortWorld/SandAndStones</name>
+          </script>
+        </material>
+      </visual>
+
+      <collision name="ground">
+        <pose>0 0 -100 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2000 2000 .1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="surface">
+        <cast_shadows>false</cast_shadows>
+        <pose>0 0 0 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2000 2000 .1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://Media/materials/scripts/water.material</uri>
+            <name>BioSortWorld/StaticDeepWater</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name="north">
+        <cast_shadows>false</cast_shadows>
+        <pose>1000 0 -50 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>.1 2000 100</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://Media/materials/scripts/water.material</uri>
+            <name>BioSortWorld/SeaWall</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name="south">
+        <cast_shadows>false</cast_shadows>
+        <pose>-1000 0 -50 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>.1 2000 100</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://Media/materials/scripts/water.material</uri>
+            <name>BioSortWorld/SeaWall</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name="east">
+        <cast_shadows>false</cast_shadows>
+        <pose>0 -1000 -50 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2000 .1 100</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://Media/materials/scripts/water.material</uri>
+            <name>BioSortWorld/SeaWall</name>
+          </script>
+        </material>
+      </visual>
+
+      <visual name="west">
+        <cast_shadows>false</cast_shadows>
+        <pose>0 1000 -50 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>2000 .1 100</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <uri>file://Media/materials/scripts/water.material</uri>
+            <name>BioSortWorld/SeaWall</name>
+          </script>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

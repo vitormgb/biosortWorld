@@ -1,0 +1,61 @@
+<?xml version='1.0'?>
+<sdf version='1.5'>
+    <model name="world_ned">
+
+      <pose>0 0 0 0 0 0</pose>
+      <static>true</static>
+
+      <link name="world_ned">
+        <gravity>0</gravity>
+        <pose>0 0 0 3.14159265359 0 1.5707963267948966</pose>
+
+        <visual name="N_visual">
+          <pose>0.25 0 0 1.5707963267948966 0 1.5707963267948966</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.5</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Red</name>
+            </script>
+          </material>
+        </visual>
+
+        <visual name="E_visual">
+          <pose>0 0.25 0 1.5707963267948966 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.5</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Green</name>
+            </script>
+          </material>
+        </visual>
+
+        <visual name="D_visual">
+          <pose>0 0 0.25 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <radius>0.01</radius>
+              <length>0.5</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Blue</name>
+            </script>
+          </material>
+        </visual>
+      </link>
+    </model>
+</sdf>
